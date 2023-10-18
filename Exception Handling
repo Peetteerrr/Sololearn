@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    Scanner scanner = new Scanner(System.in);
+	    int choice = scanner.nextInt();
+	    
+	    String[] categories = {"PCs", "Notebooks", "Tablets", "Phones", "Аccessories"};
+	    
+	    try {
+            // Attempt to access the element at the specified index
+            String selectedCategory = categories[choice];
+            System.out.println(selectedCategory);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            // Catch an exception if the index is out of range
+            System.out.println("Wrong Option");
+        }
+	}
+}
