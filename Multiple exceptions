@@ -1,0 +1,37 @@
+import java.util.Scanner;
+import java.util.InputMismatchException;
+
+public class Main {
+    public static void main(String[] args) {
+        
+        Scanner scanner = new Scanner(System.in);
+        
+        try {
+            int num1;
+            if (scanner.hasNextInt()) {
+                num1 = scanner.nextInt();
+            } else {
+                throw new InputMismatchException("Error: wrong value type");
+            }
+
+            int num2;
+            if (scanner.hasNextInt()) {
+                num2 = scanner.nextInt();
+            } else {
+                throw new InputMismatchException("Error: wrong value type");
+            }
+
+            if (num2 == 0) {
+                throw new ArithmeticException("Error: division by zero");
+            }
+
+            int result = num1 / num2;
+            System.out.println(result);
+            
+        } catch (ArithmeticException e) {
+            System.out.println(e.getMessage());
+        } catch (InputMismatchException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
