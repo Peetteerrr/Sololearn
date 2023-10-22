@@ -1,0 +1,21 @@
+import java.util.Scanner;
+import java.util.Iterator;
+import java.util.LinkedList;
+
+public class Main {
+    public static void main(String[ ] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        LinkedList<Integer> nums = new LinkedList<Integer>();
+
+        int sum = 0;
+
+        while(nums.size()<5){
+            int num = scanner.nextInt();
+            nums.add(num);
+            sum += num;
+        }
+            
+        System.out.println(sum);
+    }
+}
